@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Horas Médicas | SaludDevOps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">🏥 SaludDevOps</div>
+        <div class="status-badge"><span class="dot"></span> Servicio Operativo (Docker Nginx)</div>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Reserva de Hora Médica</h2>
+            <p>Seleccione la especialidad y complete sus datos para simular la atención.</p>
+            
+            <form id="booking-form" onsubmit="event.preventDefault(); alert('Reserva simulada con éxito.');">
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="especialidad">Especialidad Médica:</label>
+                    <select id="especialidad" required>
+                        <option value="">-- Seleccionar --</option>
+                        <option value="medicina-general">Medicina General</option>
+                        <option value="pediatria">Pediatría</option>
+                        <option value="cardiologia">Cardiología</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha">Fecha de Atención:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Confirmar Reserva</button>
+            </form>
+        </section>
+
+        <section class="card info-card">
+            <h3>Información del Sistema</h3>
+            <ul>
+                <li><strong>Entorno:</strong> Simulación Local en Docker</li>
+                <li><strong>Servidor Web:</strong> Nginx Alpine</li>
+                <li><strong>Puerto de Servicio:</strong> 8080</li>
+                <li><strong>Seguridad:</strong> Sin exposición de datos sensibles</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
