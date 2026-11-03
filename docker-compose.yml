@@ -1,0 +1,11 @@
+services:
+  web-reserva:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: servicio-reserva-medica
+    ports:
+      - "8080:80"
+    restart: always
+    environment:
+      - APP_ENV=${APP_ENV:-local}
